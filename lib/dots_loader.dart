@@ -1,12 +1,12 @@
 library dots_loader;
-
 import 'package:flutter/material.dart';
 
 class ShowDots extends StatefulWidget {
+  final MainAxisAlignment mainAxisAlignment;
   final List<int> duration;
   final int noOfDots;
   final List<Color> colors;
-  ShowDots({Key key, this.noOfDots, this.colors, this.duration});
+  ShowDots({Key key, this.noOfDots, this.colors, this.duration,this.mainAxisAlignment});
   @override
   _ShowDotsState createState() => _ShowDotsState();
 }
@@ -20,7 +20,7 @@ class _ShowDotsState extends State<ShowDots> {
     List<Color> colors = widget.colors??[Colors.red, Colors.green, Colors.yellowAccent];
     return Center(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: widget.mainAxisAlignment??MainAxisAlignment.spaceEvenly,
         children: List<Widget>.generate(
             noOfDots,
                 (index) => LoadingDots(color: colors[index],duration: duration[index],)

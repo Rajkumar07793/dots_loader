@@ -7,7 +7,7 @@ A dart package which help developers to show dots loader within the applications
 ### Show some :heart: and star the repo to support the project
 
 ## Screenshots
-<img src = "dotsAnim.gif">
+<img src = "https://raw.githubusercontent.com/Rajkumar07793/dots_loader/master/dotsAnim.gif">
 
 This project is a starting point for a Dart
 [package](https://flutter.dev/developing-packages/),
